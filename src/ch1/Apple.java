@@ -1,4 +1,4 @@
-package pack1;
+package ch1;
 
 public record Apple(
         int color,

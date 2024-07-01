@@ -1,4 +1,4 @@
-package pack1;
+package ch1;
 
 import java.util.*;
 import java.util.function.Predicate;

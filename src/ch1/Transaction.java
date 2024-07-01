@@ -1,4 +1,4 @@
-package pack1;
+package ch1;
 
 public record Transaction(double price, Currency currency) {
 
