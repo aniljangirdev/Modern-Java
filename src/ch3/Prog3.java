@@ -2,11 +2,8 @@ package ch3;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class Prog3 {
     public static void main(String[] args) {
@@ -59,5 +56,17 @@ public class Prog3 {
                 .map(ints -> Arrays.stream(ints).boxed().collect(Collectors.toList()))
                 .toList();
         System.out.println(collect);
+
+        // problem 3
+        List<int[]> list2 = integers1
+                .stream()
+                .flatMap(i -> integers2
+                        .stream()
+                        .map(j -> new int[]{i, j}))
+                .filter(ints -> Arrays.stream(ints).sum() % 3 == 0)
+                .toList();
+        list2.forEach(ints -> {
+            System.out.println(Arrays.toString(ints));
+        });
     }
 }
