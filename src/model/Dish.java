@@ -5,7 +5,6 @@ public record Dish(
         boolean vegetarian,
         int calories,
         Type type
-
 ) {
     public enum Type {MEAT, FISH, OTHER}
 }
